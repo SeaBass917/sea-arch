@@ -1,0 +1,27 @@
+2019/07/20-20:56:03.088 649 Reusing MANIFEST leveldb/MANIFEST-000001
+2019/07/20-20:56:03.088 649 Recovering log #8
+2019/07/20-20:56:03.095 649 Reusing old log leveldb/000008.log 
+2019/07/20-20:57:26.563 649 Level-0 table #12: started
+2019/07/20-20:57:26.613 649 Level-0 table #12: 63417 bytes OK
+2019/07/20-20:57:26.648 649 Delete type=0 #8
+2019/07/20-20:58:50.998 e3d Level-0 table #14: started
+2019/07/20-20:58:51.137 e3d Level-0 table #14: 57936 bytes OK
+2019/07/20-20:58:51.171 e3d Delete type=0 #11
+2019/07/20-20:59:38.492 e3d Level-0 table #16: started
+2019/07/20-20:59:38.536 e3d Level-0 table #16: 57640 bytes OK
+2019/07/20-20:59:38.570 e3d Delete type=0 #13
+2019/07/20-20:59:38.571 649 Compacting 4@0 + 1@1 files
+2019/07/20-20:59:38.603 649 Generated table #17@0: 33 keys, 61764 bytes
+2019/07/20-20:59:38.603 649 Compacted 4@0 + 1@1 files => 61764 bytes
+2019/07/20-20:59:38.637 649 compacted to: files[ 0 1 1 0 0 0 0 ]
+2019/07/20-20:59:38.637 649 Delete type=2 #7
+2019/07/20-20:59:38.638 649 Delete type=2 #9
+2019/07/20-20:59:38.638 649 Delete type=2 #12
+2019/07/20-20:59:38.638 649 Delete type=2 #14
+2019/07/20-20:59:38.638 649 Delete type=2 #16
+2019/07/20-20:59:51.928 e3d Level-0 table #19: started
+2019/07/20-20:59:52.000 e3d Level-0 table #19: 58260 bytes OK
+2019/07/20-20:59:52.034 e3d Delete type=0 #15
+2019/07/20-21:02:36.668 1a07 Level-0 table #21: started
+2019/07/20-21:02:36.705 1a07 Level-0 table #21: 72538 bytes OK
+2019/07/20-21:02:36.740 1a07 Delete type=0 #18

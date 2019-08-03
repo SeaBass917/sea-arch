@@ -1,0 +1,150 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+##-----------##
+#  Variables  #
+##-----------##
+
+set $mod Mod4
+set $term st
+set $browser firefox
+
+##----------##
+#  Settings  #
+##----------##
+
+# Font for window titles. Will also be used by the bar unless a different font
+# is used in the bar {} block below.
+font pango:monospace 10
+
+# set gap sizes
+gaps inner 15
+gaps outer 15
+
+# set border to 1px
+new_window pixel 1
+
+##----------##
+#  Start-up  #
+##----------##
+
+# Init wallpaper
+exec --no-startup-id feh --bg-fill ~/.config/pape.png	#set with feh to minimize delay from wal
+exec --no-startup-id wal -i ~/.config/pape.png
+
+exec --no-startup-id xcompmgr
+
+exec --no-startup-id nm-applet
+
+##--------##
+#  Macros  #
+##--------##
+
+# new terminal
+bindsym $mod+Return 		exec --no-startup-id  $term
+
+# kill window
+bindsym $mod+BackSpace 		kill
+
+# program launcher
+bindsym $mod+d 			exec dmenu_run
+
+# mobility
+bindsym $mod+Left 		focus left
+bindsym $mod+Down 		focus down
+bindsym $mod+Up 		focus up
+bindsym $mod+Right 		focus right
+
+# horizontal/vertical split
+bindsym $mod+h 			split h
+bindsym $mod+v 			split v
+
+# fullscreen
+bindsym $mod+f 			fullscreen toggle
+
+# toggle split
+bindsym $mod+e 			layout toggle split
+
+# reload the config
+bindsym $mod+Shift+r 		reload
+
+# exit i3 
+bindsym $mod+Shift+Escape 	exec i3-msg exit
+
+##------------##
+#  Workspaces  #
+##------------##
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Set Xresources colors:
+set_from_resource $darkblack	color0  #000000
+set_from_resource $black	color8  #000000
+set_from_resource $darkred	color1  #000000
+set_from_resource $red		color9  #000000
+set_from_resource $darkgreen	color2  #000000
+set_from_resource $green	color10 #000000
+set_from_resource $darkyellow	color3  #000000
+set_from_resource $yellow	color11 #000000
+set_from_resource $darkblue	color4  #000000
+set_from_resource $blue		color12 #000000
+set_from_resource $darkmagenta	color5  #000000
+set_from_resource $magenta	color13 #000000
+set_from_resource $darkcyan	color6  #000000
+set_from_resource $cyan		color14 #000000
+set_from_resource $darkwhite	color7  #000000
+set_from_resource $white	color15 #000000
+set $transparent #00000000
+
+bar {
+	font pango:mono 10
+	colors {
+			background $darkblack
+			statusline $darkwhite
+			separator $cyan
+			focused_workspace  $blue $darkblue $darkblack
+        		active_workspace   $blue $blue $darkwhite
+      			inactive_workspace $darkblack $darkblack $white
+        		urgent_workspace   $darkblack $darkblack $white
+		}
+	status_command i3blocks
+	position top
+	mode dock
+	modifier None
+}
